@@ -9,3 +9,8 @@ Furthermore there are python-files to keep the main-notebook short and tidy.
 
 
 For the CLQ question we have add the file CommandLine.sh and the result are signed on the notebook.
+
+
+The pretty view of our notebook can be found on:
+
+https://nbviewer.org/github/Reeb00/HW3_group1/blob/main/main.ipynb
