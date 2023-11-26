@@ -18,7 +18,7 @@ def enum_list_to_txt(li):
 
 def beautify(query_result):
     essential_information = query_result.copy()
-    essential_information.loc[:,"essential_description"] = essential_information.apply( lambda row: str(" - ".join(row[['courseName','fees']])) , axis=1 )
+    essential_information.loc[:,"essential_description"] = essential_information.apply( lambda row: str(" - ".join(map(str, row[['courseName','fees']]))) , axis=1 )
     # essential_information.loc[:,"essential_description"] = essential_information.apply( lambda row: str(" - ".join(row[['universityName','facultyName','courseName','fees']])) , axis=1 )
     essential_information = essential_information[["lng","lat","essential_description",'country','city','universityName']]
     essential_information = pd.DataFrame(essential_information.groupby(['lng','lat','country','city','universityName'])['essential_description'].apply(list).reset_index())
